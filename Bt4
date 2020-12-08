@@ -1,1 +1,24 @@
+#include <iostream>
+
+void Input(int &N) 
+{ 
+    std::cin >> N; 
+}
+
+int SoNhoNhat(int a[], int n)
+{
+    int max = a[0];
+    for (int i=1; i<n; i++)
+    if (max < a[i])
+        max = a[i];
+    return max;
+}
+
+int main() {
+    int a[MAXN], n, X;
+    Input(n);
+    NhapMang(a, n);
+    std::cout << SoNhoNhat(a, n);
+    return 0;
+}
 
