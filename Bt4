@@ -1,24 +1,46 @@
 #include <iostream>
+#include <math.h>
+using namespace std;
+#define MAX 100
 
-void Input(int &N) 
-{ 
-    std::cin >> N; 
-}
+void NhapmangSNT(int a[], int &n);
+int SoPhanTuChuaY(int a[], int n,int y);
 
-int SoNhoNhat(int a[], int n)
+bool KiemTraSNT(int a)
+  {
+      if (n==0||n==1) return 0;
+     long i;
+        for (i=2; i<=sqrt(n); i++)
+        if(n%i==0) return 0;
+    return 1;
+  }
+
+void NhapmangSNT(int a, int &n)
 {
-    int max = a[0];
-    for (int i=1; i<n; i++)
-    if (max < a[i])
-        max = a[i];
-    return max;
+    cin >> n;
+    int i=2, k=0;
+    while (k<n){
+        if (KiemTraSNT(i)=true) a[k++]=i;
+        i++;
+    }
 }
 
-int main() {
-    int a[MAXN], n, X;
-    Input(n);
-    NhapMang(a, n);
-    std::cout << SoNhoNhat(a, n);
-    return 0;
+bool KiemTraChuaY(int a, int b){
+    }
+
+int SoPhanTuChuaY(int a[], int n, int y)
+{
+    int dem = 0;
+    for (int i=0; i<n-1; i++)
+    if Kiemtrachuay(a[i], y)==true) dem=dem+1;
+    return dem;
 }
 
+int main()
+{
+	int a[MAX], n, y;
+	cin >>y;
+	NhapmangSNT(a,n);
+	cout << SoPhanTuChuaY(a, n, y) << endl;;
+	return 0;
+} 
