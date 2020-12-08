@@ -1,0 +1,35 @@
+#include <iostream>
+#define MAXN 100
+using namespace std;
+void NhapMang(int a[], int &n)
+{   
+    cin >> n;
+	for(int i=0; i<n; i++)
+	{
+		cin>>a[i];
+	}
+}
+void XuatMang(int a[], int n)
+{
+	for(int i=0; i<n; i++)
+		cout<< a[i] <<"\t";
+}
+
+int TongOViTriChan(int a[], int n)
+{
+	int s=0;
+	for(int i=0; i<n; i++)
+		if(i%2==0)
+			s = s + a[i];
+		return s;
+
+}
+
+int main() {
+    int a[MAXN], n;
+    NhapMang(a, n);
+
+    std::cout << TongOViTriChan(a, n);
+
+    return 0;
+}
